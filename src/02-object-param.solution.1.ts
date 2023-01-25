@@ -1,6 +1,14 @@
 import { expect, it } from "vitest";
 
-export const addTwoNumbers = (params: { first: number; second: number }) => {
+interface info {
+  first: number;
+}
+
+interface info {
+  second: number;
+}
+// interface can be extended but type cannot be extended 
+export const addTwoNumbers = (params: info) => {
   return params.first + params.second;
 };
 

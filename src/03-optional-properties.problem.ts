@@ -1,6 +1,11 @@
 import { expect, it } from "vitest";
 
-export const getName = (params: { first: string; last: string }) => {
+type args = {
+  first: string,
+  last?: string,
+}
+
+export const getName = (params:args) => {
   if (params.last) {
     return `${params.first} ${params.last}`;
   }
@@ -9,7 +14,8 @@ export const getName = (params: { first: string; last: string }) => {
 
 it("Should work with just the first name", () => {
   const name = getName({
-    first: "Matt",
+    first: "Matt"
+    // could ahave also included an empty string here instead of ? in args ( last: '')
   });
 
   expect(name).toEqual("Matt");

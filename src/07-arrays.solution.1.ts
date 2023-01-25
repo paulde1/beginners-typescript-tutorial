@@ -11,7 +11,7 @@ interface Post {
   title: string;
 }
 
-export const defaultUser: User = {
+export const defaultUser :User = {
   id: 1,
   firstName: "Matt",
   lastName: "Pocock",
