@@ -2,7 +2,9 @@ import { expect, it } from "vitest";
 import { string } from "zod";
 import { Equal, Expect } from "./helpers/type-utils";
 
-const guitarists = new Set('');
+const guitarists = new Set<string>();
+//also works 
+// const guitarists = new Set('');
 
 guitarists.add("Jimi Hendrix");
 guitarists.add("Eric Clapton");
