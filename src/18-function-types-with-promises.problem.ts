@@ -1,5 +1,4 @@
 import { expect, it } from "vitest";
-import { P } from "vitest/dist/global-60f880c6";
 
 interface User {
   id: string;
@@ -8,8 +7,8 @@ interface User {
 }
 
 const createThenGetUser = async (
-  createUser: Promise<User>c,
-  getUser: (id: string) => User,
+  createUser: () => Promise<string>,
+  getUser: (id: string) => Promise<User>,
 ): Promise<User> => {
   const userId: string = await createUser();
 
